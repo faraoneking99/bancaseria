@@ -80,10 +80,11 @@ public class Main {
                                             selConto=s.nextInt();
                                             switch (selConto){
                                                 case 1:{
-
+                                                    //opzioni di deposito
                                                     break;
                                                 }
                                                 case 2:{
+                                                    //opzioni di prelievo
                                                     break;
                                                 }
                                                 default:{
