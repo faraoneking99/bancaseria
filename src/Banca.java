@@ -1,4 +1,3 @@
-package BancaSeria;
 import java.util.ArrayList;
 public class Banca {
 	public String nome;
@@ -18,4 +17,19 @@ public class Banca {
 	    return istanza; 
 	  }
 	}
-}
+	public boolean aggiungiUtente (Utente u) {
+		int i=0;
+		boolean trovato = false;
+		while ( trovato == false && i < listaUtenti.size() ()){
+			if(u.getEmail().equals(listaUtenti.get(i++).getEmail()))
+				trovato = true;
+		}
+		if( trovato ) {
+			this.listaUtenti.add(u);
+			return true;
+		}
+		else 
+			System.out.println("Utente non aggiunto");
+		return false;
+	}
+	
