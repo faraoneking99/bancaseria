@@ -1,5 +1,3 @@
-
-
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -85,14 +83,14 @@ public class Main {
                                                     //opzioni di deposito
                                                     System.out.print("SOMMA DA DEPOSITARE: ");
                                                     s.nextInt();
-                                                    contoDaUsare.deposita(importo);
+                                                    contoDaUsare.versamento(importo);
                                                     break;
                                                 }
                                                 case 2:{
                                                     //opzioni di prelievo
                                                     System.out.print("SOMMA DA PRELEVARE: ");
                                                     s.nextInt();
-                                                    contoDaUsare.ritira(importo);
+                                                    contoDaUsare.ritiro(importo);
                                                     break;
                                                 }
                                                 default:{
