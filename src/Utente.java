@@ -5,10 +5,10 @@ class Utente
 {
 	private String nome;
 	private String cognome;
-	private LocalDate datanascita;
+	private LocalDate dataNascita;
 	private String email;
 	private int PIN;
-	ArrayList <Conto> conti = new ArrayList<Conto>();
+	ArrayList <Conto> conti = new ArrayList<Conto>(2);
 	
 	
 	public String getNome() {
@@ -31,13 +31,13 @@ class Utente
 	}
 
 
-	public LocalDate getDatanascita() {
-		return datanascita;
+	public LocalDate getDataNascita() {
+		return dataNascita;
 	}
 
 
-	public void setDatanascita(LocalDate datanascita) {
-		this.datanascita = datanascita;
+	public void setDataNascita(LocalDate dataNascita) {
+		this.dataNascita = dataNascita;
 	}
 
 
@@ -60,10 +60,10 @@ class Utente
 	{
 		nome = n;
 		cognome = c;
-		datanascita = a;
+		dataNascita = a;
 		email = s;
 		PIN = Utilities.generaPin();
-		System.out.println("Il tuo pin: "+PIN);
+		System.out.println("Il tuo pin: " + PIN);
 		
 	}
 
