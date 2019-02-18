@@ -1,16 +1,12 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-
-class Utente 
-{
+class Utente{
 	private String nome;
 	private String cognome;
 	private LocalDate dataNascita;
 	private String email;
 	private int PIN;
 	ArrayList <Conto> conti = new ArrayList<Conto>(2);
-	
-	
 	public String getNome() {
 		return nome;
 	}
