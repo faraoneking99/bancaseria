@@ -1,5 +1,6 @@
 
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -7,8 +8,10 @@ public class Main {
         System.out.println("BANCA-SERIA v1.0");
         Scanner s = new Scanner(System.in);
         int sel;
-        banca = Banca.getInstance(); //creazione della banca
+        Banca banca = Banca.getInstance(); //creazione della banca
         String email,nome,cognome;
+        LocalDate dataNascita;
+        int giorno, mese,anno;
         boolean valida;
         Utente loggedUser = null;
         Utente user;
@@ -21,13 +24,23 @@ public class Main {
             switch(sel){
                 case 1:{
                     System.out.println("NOME:\t");
+                    nome=s.next();
                     System.out.println("COGNOME:\t");
+                    cognome=s.next();
+                    System.out.println("DATA DI NASCITA:");
+                    System.out.println("GIORNO");
+                    giorno=s.nextInt();
+                    System.out.println("MESE");
+                    mese=s.nextInt();
+                    System.out.println("ANNO");
+                    anno=s.nextInt();
+                    dataNascita= LocalDate.of(anno,mese,giorno);
                     do{
                         System.out.println("EMAIL:\t");
                         email=s.next();
                         valida=Utilities.validateEmail(email);
                     }while(!valida);
-                    user=new Utente()
+                    user=new Utente(nome,cognome,dataNascita,email);
                     break;
                 }
                 case 2:{
