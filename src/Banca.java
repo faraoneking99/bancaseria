@@ -1,4 +1,3 @@
-package ProgettoBanca;
 import java.util.ArrayList;
 public class Banca {
 	public String nome;
