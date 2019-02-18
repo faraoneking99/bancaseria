@@ -1,1 +1,5 @@
 
+BANCA
+  ATTRIBUTI: 
+  METODI: login(email, pin)
+          
