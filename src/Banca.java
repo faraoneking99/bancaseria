@@ -36,7 +36,7 @@ public class Banca {
 		int i=0;
 		boolean trovato = false;
 		while ( trovato == false && i < listaUtenti.size() ){
-			if ( email.equals(listaUtenti.get(i).getEmail()) && ( pin.equals(listaUtenti.get(i).getPIN() ) ) )
+			if ( email.equals(listaUtenti.get(i).getEmail()) && ( pin == listaUtenti.get(i).getPIN() ) ) 
 				trovato = true;
 			else 
 				i++;
