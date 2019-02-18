@@ -38,11 +38,12 @@ public class Banca {
 		while ( trovato == false && i < listaUtenti.size() ){
 			if ( email.equals(listaUtenti.get(i).getEmail()) && ( pin.equals(listaUtenti.get(i).getPIN() ) ) )
 				trovato = true;
-			i++;
+			else 
+				i++;
 		}
 		if( trovato ){
 			System.out.println("Benvenuto " + listaUtenti.get(i).getNome());
-			return listaUtenti.get(i--);
+			return listaUtenti.get(i);
 		}
 		System.out.println("Login fallito");
 		return null;
