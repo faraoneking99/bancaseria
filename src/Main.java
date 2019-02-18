@@ -70,8 +70,32 @@ public class Main {
                                 }
                                 case 2:{
                                     loggedUser.showConti();
-                                    System.out.print("DIGITA IL NOME DEL CONTO CHE VUOI USARE: ");
-                                    String contoDaUsare = s.next();
+                                    System.out.print("DIGITA L'ID DEL CONTO CHE VUOI USARE: ");
+                                    int IDConto = s.nextInt();
+                                    Conto contoDaUsare = loggedUser.getConto(IDConto);
+                                    if(contoDaUsare!=null){
+                                        int selConto;
+                                        do{
+                                            menuConto();
+                                            selConto=s.nextInt();
+                                            switch (selConto){
+                                                case 1:{
+
+                                                    break;
+                                                }
+                                                case 2:{
+                                                    break;
+                                                }
+                                                default:{
+                                                    System.out.println("OPZIONE NON SUPPORTATA");
+                                                    break;
+                                                }
+                                            }
+                                        }while(selConto!=99);
+                                    }else{
+                                        System.err.println("CONTO NON ESISTENTE");
+                                    }
+
                                     break;
                                 }
                                 default:{
