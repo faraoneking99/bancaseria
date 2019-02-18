@@ -16,7 +16,7 @@ public class Main {
         Utente loggedUser = null;
         Utente user;
         int pin;
-
+        String nomeConto;
 
         do{
             menuPrincipale();
@@ -55,6 +55,21 @@ public class Main {
                         do{
                             menuLoggato();
                             logSel=s.nextInt();
+                            switch(logSel){
+                                case 1:{
+
+                                    System.out.print("NOME DEL CONTO: ");
+                                    nomeConto=s.next();
+                                    loggedUser.aggiungiConto(nomeConto);
+                                    break;
+                                }
+                                case 2:{
+                                    break;
+                                }
+                                default:{
+                                    System.out.println("OPZIONE NON DISPONIBILE");
+                                }
+                            }
                         }while(logSel!=99);
                     }
                     break;
