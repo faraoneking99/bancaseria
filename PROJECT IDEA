@@ -6,3 +6,7 @@ controllare funzionalità di preleva e deposita
 
 finalizzare log
 
+in conto ci deve essere una localdate ultima modifica, quando richiamo i metodi ritira o preleva deve confrontare con la data locale di oggi
+se non è uguale deve resettare i campi ritira e deposita
+
+creare variabile con depositato oggi e prelevato oggi (resettate ogni giorno)
