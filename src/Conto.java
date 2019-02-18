@@ -1,11 +1,15 @@
 import java.time.LocalDate;
 
 public class Conto {
+    String nome;
     double saldo = 0.0;
     LocalDate  ultimaModifica;
     double vers = 0.0;
     double ritiro = 0.0;
 
+    public Conto(String nome) {
+        this.nome = nome;
+    }
     public void versamento(double vers){
         if(ultimaModifica == null)
             ultimaModifica = LocalDate.now();
@@ -14,7 +18,7 @@ public class Conto {
             ultimaModifica = LocalDate.now();
         }
         else
-        if(vers+this.vers <= 500) {
+        if(vers + this.vers <= 500) {
             if(vers >= 50)
                 this.vers += vers;
             else
@@ -23,7 +27,6 @@ public class Conto {
         else
             System.out.println("Puoi versare 500$ al giorno (versamento massimo rimanente  " + (500-this.vers) + "$" );
     }
-
     public void ritiro(double ritiro){
         if(ultimaModifica == null)
             ultimaModifica = LocalDate.now();
@@ -41,6 +44,8 @@ public class Conto {
         else
             System.out.println("Puoi ritirare 500$ al giorno (ritiro massimo rimanente  " + (500-this.vers) + "$" );
     }
-
+    public String getNome(){
+        return this.nome;
+    }
 }
 

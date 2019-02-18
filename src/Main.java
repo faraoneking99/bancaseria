@@ -15,7 +15,6 @@ public class Main {
         Utente user;
         int pin;
         String nomeConto;
-
         do{
             menuPrincipale();
             sel=s.nextInt();
@@ -60,7 +59,6 @@ public class Main {
                             logSel=s.nextInt();
                             switch(logSel){
                                 case 1:{
-
                                     System.out.print("NOME DEL CONTO DA CREARE: ");
                                     nomeConto=s.next();
                                     loggedUser.aggiungiConto(nomeConto);
@@ -78,7 +76,6 @@ public class Main {
                                             selConto=s.nextInt();
                                             double importo=0;
                                             switch (selConto){
-
                                                 case 1:{
                                                     //opzioni di deposito
                                                     System.out.print("SOMMA DA DEPOSITARE: ");
@@ -102,7 +99,6 @@ public class Main {
                                     }else{
                                         System.err.println("CONTO NON ESISTENTE");
                                     }
-
                                     break;
                                 }
                                 default:{
@@ -117,7 +113,6 @@ public class Main {
                     System.out.println("OPZIONE NON SUPPORTATA");
                     break;
                 }
-
             }
         }while(sel!=99);
     }
@@ -137,6 +132,4 @@ public class Main {
         System.out.println("2. PRELEVA");
         System.out.println("3. CHIUDI QUESTO CONTO");
     }
-
-
 }

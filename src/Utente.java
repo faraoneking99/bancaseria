@@ -14,48 +14,31 @@ class Utente
 	public String getNome() {
 		return nome;
 	}
-
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-
 	public String getCognome() {
 		return cognome;
 	}
-
-
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-
-
 	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
-
-
 	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
 	}
-
-
 	public String getEmail() {
+
 		return email;
 	}
-
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
 	public int getPIN() {
 		return PIN;
 	}
-	
-	
 	public Utente(String n,String c,LocalDate a,String s)
 	{
 		nome = n;
@@ -64,9 +47,7 @@ class Utente
 		email = s;
 		PIN = Utilities.generaPin();
 		System.out.println("Il tuo pin: " + PIN);
-		
 	}
-
 	public boolean aggiungiConto(String s)
 	{
 		if(conti.size()>=2){
@@ -80,7 +61,6 @@ class Utente
 		return true;
 		}
 	}
-
 	public void showConti()
 	{
 		if(conti==null)
@@ -92,7 +72,6 @@ class Utente
 			i++;
 		}
 	}
-
 	public Conto getConto(int i)
 	{
 		return conti.get(i);

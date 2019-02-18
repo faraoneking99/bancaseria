@@ -13,7 +13,6 @@ public class Banca {
 	    {
 	      istanza = new Banca("BLM");
 	    }
-
 	    return istanza; 
 	  }
 	public boolean aggiungiUtente (Utente u) {
@@ -31,7 +30,6 @@ public class Banca {
 			System.out.println("Utente non aggiunto");
 		return false;
 	}
-	
 	public Utente login (String email, int pin){
 		int i=0;
 		boolean trovato = false;
