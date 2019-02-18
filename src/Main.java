@@ -7,17 +7,27 @@ public class Main {
         System.out.println("BANCA-SERIA v1.0");
         Scanner s = new Scanner(System.in);
         int sel;
-
+        //Banca.getInstance(); creazione della banca
+        String email;
+        boolean valida;
 
         do{
             menuPrincipale();
             sel=s.nextInt();
             switch(sel){
                 case 1:{
+                    System.out.println("NOME:\t");
+                    System.out.println("COGNOME:\t");
+                    do{
+                        System.out.println("EMAIL:\t");
+                        email=s.next();
+                        valida=Utilities.validateEmail(email);
+                    }while(!valida);
 
                     break;
                 }
                 case 2:{
+                    //LOGIN
                     break;
                 }
                 default:{
@@ -44,4 +54,5 @@ public class Main {
         System.out.println("2. PRELEVA");
         System.out.println("3. CHIUDI QUESTO CONTO");
     }
+
 }
