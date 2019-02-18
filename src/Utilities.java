@@ -17,6 +17,8 @@ public class Utilities {
         int miavar = random.nextInt(c) + a;
         return miavar;
     }
+    public static boolean autorizzazione(){
 
+    }
 
 }

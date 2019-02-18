@@ -7,9 +7,12 @@ public class Main {
         System.out.println("BANCA-SERIA v1.0");
         Scanner s = new Scanner(System.in);
         int sel;
-        //Banca.getInstance(); creazione della banca
+        banca = Banca.getInstance(); //creazione della banca
         String email;
         boolean valida;
+        Utente loggedUser = null;
+        int pin;
+
 
         do{
             menuPrincipale();
@@ -27,7 +30,20 @@ public class Main {
                     break;
                 }
                 case 2:{
-                    //LOGIN
+                    //LOGIN mail pin
+                    System.out.println("EMAIL:\t");
+                    email=s.next();
+                    System.out.println("PIN:\t");
+                    pin = s.nextInt();
+                    loggedUser = banca.login(email, pin);
+                    if(loggedUser!=null){
+                        int logSel;
+                        do{
+                            menuLoggato();
+                            logSel=s.nextInt();
+
+                        }while(logSel!=99);
+                    }
                     break;
                 }
                 default:{
@@ -54,5 +70,6 @@ public class Main {
         System.out.println("2. PRELEVA");
         System.out.println("3. CHIUDI QUESTO CONTO");
     }
+
 
 }
