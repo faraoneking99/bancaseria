@@ -82,10 +82,19 @@ class Utente
 	}
 
 	public void showConti()
-	{	
+	{
+		if(conti==null)
+		return;	
+		int i=1;
 		for(Conto s: conti)
 		{	
-			System.out.println(s.getNome());
+			System.out.println(i+" "+s.getNome());
+			i++;
 		}
+	}
+
+	public Conto getConto(int i)
+	{
+		return conti.get(i);
 	}
 }
