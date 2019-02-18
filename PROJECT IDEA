@@ -1,12 +1,13 @@
 TODO:
 log clienti ogni cliente ha il suo log
+TODO:
 log banca log generale con attività di tutti i clienti
-
+TODO:
 controllare funzionalità di preleva e deposita
-
+TODO:
 finalizzare log
-
+TODO:
 in conto ci deve essere una localdate ultima modifica, quando richiamo i metodi ritira o preleva deve confrontare con la data locale di oggi
 se non è uguale deve resettare i campi ritira e deposita
-
+TODO:
 creare variabile con depositato oggi e prelevato oggi (resettate ogni giorno)
