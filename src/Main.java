@@ -41,6 +41,11 @@ public class Main {
                         valida=Utilities.validateEmail(email);
                     }while(!valida);
                     user=new Utente(nome,cognome,dataNascita,email);
+                    if(banca.aggiungiUtente(user)){
+                        System.out.println("UTENTE REGISTRATO CORRETTAMENTE");
+                    }else{
+                        System.out.println("UTENTE NON AGGIUNTO");
+                    }
                     break;
                 }
                 case 2:{
@@ -67,7 +72,6 @@ public class Main {
                                     loggedUser.showConti();
                                     System.out.print("DIGITA IL NOME DEL CONTO CHE VUOI USARE: ");
                                     String contoDaUsare = s.next();
-
                                     break;
                                 }
                                 default:{
