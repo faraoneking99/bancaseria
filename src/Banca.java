@@ -24,7 +24,7 @@ public class Banca {
 			if(u.getEmail().equals(listaUtenti.get(i++).getEmail()))
 				trovato = true;
 		}
-		if( trovato ) {
+		if( !trovato ) {
 			this.listaUtenti.add(u);
 			return true;
 		}
