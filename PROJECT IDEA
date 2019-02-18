@@ -1,5 +1,3 @@
-
-BANCA
-  ATTRIBUTI: 
-  METODI: login(email, pin)
-          
+TODO:
+log clienti ogni cliente ha il suo log
+log banca log generale con attività di tutti i clienti
