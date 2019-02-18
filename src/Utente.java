@@ -1,5 +1,3 @@
-
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -69,4 +67,25 @@ class Utente
 		
 	}
 
+	public boolean aggiungiConto(String s)
+	{
+		if(conti.size()>=2){
+		System.out.println("Impossibile avere piu di 2 conti!");
+		return true;
+		}
+		else{
+		Conto c = new Conto(s);
+		conti.add(c);
+		System.out.println("Conto creato correttamente!");
+		return true;
+		}
+	}
+
+	public void showConti()
+	{	
+		for(Conto s: conti)
+		{	
+			System.out.println(s.getNome());
+		}
+	}
 }
