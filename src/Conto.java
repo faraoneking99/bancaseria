@@ -1,5 +1,3 @@
-package BANCA;
-
 import java.time.LocalDate;
 
 public class Conto {
