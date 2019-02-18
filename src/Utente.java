@@ -64,7 +64,7 @@ class Utente
 		cognome = c;
 		datanascita = a;
 		email = s;
-		PIN = generaPin();
+		PIN = Utilities.generaPin();
 		System.out.println("Il tuo pin: "+PIN);
 		
 	}

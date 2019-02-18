@@ -17,8 +17,11 @@ public class Utilities {
         int miavar = random.nextInt(c) + a;
         return miavar;
     }
-    public static boolean autorizzazione(){
-
+    public static boolean autorizzazione(Utente utente, int pin){
+        if(utente.getPIN()==(pin)){
+            return true;
+        }
+        return false;
     }
 
 }
