@@ -7,15 +7,19 @@ public class Main {
         System.out.println("BANCA-SERIA v1.0");
         Scanner s = new Scanner(System.in);
         int sel;
-        //Utente tmp = new Utente();
+
+
         do{
             menuPrincipale();
             sel=s.nextInt();
             switch(sel){
                 case 1:{
 
+                    break;
                 }
-                case 2:{}
+                case 2:{
+                    break;
+                }
                 default:{
                     System.out.println("OPZIONE NON SUPPORTATA");
                     break;
