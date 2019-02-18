@@ -8,9 +8,10 @@ public class Main {
         Scanner s = new Scanner(System.in);
         int sel;
         banca = Banca.getInstance(); //creazione della banca
-        String email;
+        String email,nome,cognome;
         boolean valida;
         Utente loggedUser = null;
+        Utente user;
         int pin;
 
 
@@ -26,7 +27,7 @@ public class Main {
                         email=s.next();
                         valida=Utilities.validateEmail(email);
                     }while(!valida);
-
+                    user=new Utente()
                     break;
                 }
                 case 2:{
@@ -41,7 +42,6 @@ public class Main {
                         do{
                             menuLoggato();
                             logSel=s.nextInt();
-
                         }while(logSel!=99);
                     }
                     break;
