@@ -32,7 +32,7 @@ public class Banca {
 		return false;
 	}
 	
-	public Utente login (String email, String pin){
+	public Utente login (String email, int pin){
 		int i=0;
 		boolean trovato = false;
 		while ( trovato == false && i < listaUtenti.size() ){
