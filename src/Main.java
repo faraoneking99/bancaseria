@@ -58,12 +58,16 @@ public class Main {
                             switch(logSel){
                                 case 1:{
 
-                                    System.out.print("NOME DEL CONTO: ");
+                                    System.out.print("NOME DEL CONTO DA CREARE: ");
                                     nomeConto=s.next();
                                     loggedUser.aggiungiConto(nomeConto);
                                     break;
                                 }
                                 case 2:{
+                                    loggedUser.showConti();
+                                    System.out.print("DIGITA IL NOME DEL CONTO CHE VUOI USARE: ");
+                                    String contoDaUsare = s.next();
+
                                     break;
                                 }
                                 default:{
