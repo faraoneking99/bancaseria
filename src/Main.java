@@ -78,13 +78,21 @@ public class Main {
                                         do{
                                             menuConto();
                                             selConto=s.nextInt();
+                                            double importo=0;
                                             switch (selConto){
+
                                                 case 1:{
                                                     //opzioni di deposito
+                                                    System.out.print("SOMMA DA DEPOSITARE: ");
+                                                    s.nextInt();
+                                                    contoDaUsare.deposita(importo);
                                                     break;
                                                 }
                                                 case 2:{
                                                     //opzioni di prelievo
+                                                    System.out.print("SOMMA DA PRELEVARE: ");
+                                                    s.nextInt();
+                                                    contoDaUsare.ritira(importo);
                                                     break;
                                                 }
                                                 default:{
